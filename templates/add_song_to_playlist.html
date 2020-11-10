@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1 class="text-center">Add a song to {{ playlist.name }}</h1>
+<h1 class="text-center">Add a song to playlist: {{ playlist.name }}</h1>
 
 <form id="add-song-to-playlist"  method="POST">
   {{ form.hidden_tag() }}
