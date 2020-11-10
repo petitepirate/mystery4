@@ -3,10 +3,10 @@
 
 {% block content %}
 
-<div class="jumbotron">
+<div >
   <h1>{{ playlist.name }}!</h1>
   {% if playlist.description %}
-  <p class="lead">{{ playlist.description }}</p>
+  <p class="h5">{{ playlist.description }}</p>
   {% endif %}
 </div>
 
@@ -14,13 +14,13 @@
 <ul>
   {% for song in songs %}
     <li>
-      <a href="/songs/{{ song.id }}">{{ song.title }} -- {{ song.artist }}</a>
+      <a href="/songs/{{ song.id }}">{{ song.title }} -By: {{ song.artist }}</a>
     </li>
   {% endfor %}
   </ul>
 
 <p>
-  <a class="btn btn-primary" href="/playlists/{{ playlist.id }}/add-song">
+  <a class="btn btn-info" href="/playlists/{{ playlist.id }}/add-song">
     Add Song To Playlist
   </a>
 </p>

@@ -4,7 +4,7 @@
 
 <h1 class="text-center">Add New Playlist</h1>
 
-<form id="add-playlist" class="text-center" method="POST">
+<form id="add-playlist"  method="POST">
   {{ form.hidden_tag() }}
 
   {% for field in form 
@@ -19,7 +19,7 @@
       {% endfor %}
   </div>
 {% endfor %}
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-info">Submit</button>
 
 </form>
 
