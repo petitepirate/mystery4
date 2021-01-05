@@ -1,0 +1,28 @@
+  
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div >
+  <h1>{{ playlist.name }}!</h1>
+  {% if playlist.description %}
+  <p class="h5">{{ playlist.description }}</p>
+  {% endif %}
+</div>
+
+
+<ul>
+  {% for song in songs %}
+    <li>
+      <a href="/songs/{{ song.id }}">{{ song.title }} -By: {{ song.artist }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+
+<p>
+  <a class="btn btn-info" href="/playlists/{{ playlist.id }}/add-song">
+    Add Song To Playlist
+  </a>
+</p>
+
+{% endblock %}
